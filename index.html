@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RE-ORDER | Nasgor Geprek Gokil</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="#" onclick="showScreen('home'); return false;">
+    <span class="brand-icon">🍳</span>
+    <span>RE-ORDER<small>NASGOR GEPREK GOKIL</small></span>
+  </a>
+  <div class="topbar-right">
+    <span class="open-label"><i></i> Buka hari ini</span>
+    <span class="user-avatar">P</span>
+  </div>
+</header>
+
+<main class="app">
+
+  <section id="home" class="screen active">
+    <div class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">SELAMAT DATANG DI</span>
+        <h1>Nasgor Geprek Gokil,<br><em>rasa gokil, harga bersahabat!</em></h1>
+        <p>Nikmati nasi goreng dan ayam geprek favoritmu. Pesan mudah, bayar praktis, tinggal ambil!</p>
+        <button class="btn btn-light" onclick="showScreen('menu')">Pesan Sekarang <span>→</span></button>
+      </div>
+      <div class="hero-food" aria-label="Ilustrasi makanan">🍛</div>
+      <div class="hero-decoration">GOKIL!</div>
+    </div>
+
+    <div class="section-heading">
+      <div><span class="eyebrow">PILIHAN TERBAIK</span><h2>Menu Favorit</h2></div>
+      <button class="text-btn" onclick="showScreen('menu')">Lihat semua →</button>
+    </div>
+
+    <div class="menu-grid">
+      <article class="food-card">
+  <div class="food-art art-one">
+    <img src="images/Nasi-Goreng-Original.jpeg" alt="Nasi Goreng Original">
+  </div>
+
+  <div class="food-info">
+    <h3>Nasi Goreng Original</h3>
+    <p>dengan cita rasa khas</p>
+    <strong>Rp16.000</strong>
+  </div>
+</article>
+      </article>
+      <article class="food-card">
+  <div class="food-art art-one">
+    <img src="images/Nasi-goreng-Spesial.jpeg" alt="Nasi goreng Spesial">
+  
+  </div>
+  <div class="food-info">
+     <h3>Nasi goreng Spesial</h3>
+     <p>lebih lengkap dan mantab</p>
+     <strong>Rp20.000</strong>
+     </div>
+    </article>
+      <article class="food-card">
+        <div class="food-art art-three">
+        <img src="images/Ayam-Geprek.jpeg" alt="Ayam Geprek">
+        </div>
+        <div class="food-info"><h3>Ayam Geprek</h3><p>Ayam renyah sambal nikmat</p><strong>Rp18.000</strong></div>
+      </article>
+      <article class="food-card">
+        <div class="food-art art-four">
+        <img src="images/Nasi-Goreng-Geprek.jpeg" alt="Nasi Goreng Geprek">
+        </div>
+        <div class="food-info"><h3>Nasi Goreng Geprek</h3><p>Perpaduan favorit</p><strong>Rp22.000</strong></div>
+      </article>
+    </div>
+
+    <div class="info-strip">
+      <div><span>01</span><p><b>Pilih menu</b><small>Tentukan makanan favoritmu</small></p></div>
+      <div><span>02</span><p><b>Bayar praktis</b><small>Simulasi pembayaran QRIS</small></p></div>
+      <div><span>03</span><p><b>Ambil pesanan</b><small>Pantau status sampai siap</small></p></div>
+    </div>
+  </section>
+
+  <section id="menu" class="screen">
+    <div class="page-heading">
+      <span class="eyebrow">CASE 1 · PEMESANAN</span>
+      <h1>Pilih menu favoritmu</h1>
+      <p>Pilih makanan, atur jumlah, lalu lanjutkan ke checkout.</p>
+    </div>
+    <div class="menu-grid order-grid">
+      <article class="food-card order-card">
+        <div class="food-art art-one">
+        <img src="images/Nasi-Goreng-Original.jpeg" alt="Nasi Goreng Original">
+        </div>
+        <div class="food-info"><h3>Nasi Goreng Original</h3><p>Gurih dan nikmat</p><strong>Rp16.000</strong>
+          <button class="btn btn-primary add-btn" onclick="addItem('Nasi Goreng Original',16000)">+ Tambah</button></div>
+      </article>
+      <article class="food-card order-card">
+        <div class="food-art art-two">
+        <img src="images/Nasi-Goreng-Spesial.jpeg" alt="Nasi Goreng Spesial">
+        </div>
+        <div class="food-info"><h3>Nasi Goreng Spesial</h3><p>Lebih lengkap dan mantap</p><strong>Rp20.000</strong>
+          <button class="btn btn-primary add-btn" onclick="addItem('Nasi Goreng Spesial',20000)">+ Tambah</button></div>
+      </article>
+      <article class="food-card order-card">
+        <div class="food-art art-three">
+        <img src="images/Ayam-Geprek.jpeg" alt="Ayam Geprek">
+        </div>
+        <div class="food-info"><h3>Ayam Geprek</h3><p>Ayam renyah sambal nikmat</p><strong>Rp18.000</strong>
+          <button class="btn btn-primary add-btn" onclick="addItem('Ayam Geprek',18000)">+ Tambah</button></div>
+      </article>
+      <article class="food-card order-card">
+        <div class="food-art art-four">
+        <img src="images/Nasi-Goreng-Geprek.jpeg" alt="Nasi Goreng Geprek">
+        </div>
+        <div class="food-info"><h3>Nasi Goreng Geprek</h3><p>Perpaduan favorit</p><strong>Rp22.000</strong>
+          <button class="btn btn-primary add-btn" onclick="addItem('Nasi Goreng Geprek',22000)">+ Tambah</button></div>
+      </article>
+    </div>
+    <div class="cart-bar">
+      <div><small>Jumlah pesanan</small><b id="cart-count">0 item · Rp0</b></div>
+      <button class="btn btn-primary" onclick="goCheckout()">Lanjut Checkout →</button>
+    </div>
+  </section>
+
+  <section id="checkout" class="screen">
+    <div class="page-heading">
+      <span class="eyebrow">CASE 1 · PEMBAYARAN</span>
+      <h1>Checkout pesanan</h1>
+      <p>Periksa kembali pesananmu sebelum melakukan pembayaran.</p>
+    </div>
+    <div class="checkout-layout">
+      <div class="panel">
+        <h2>Detail Pesanan</h2>
+        <div id="checkout-items"></div>
+        <div class="total-line"><span>Total pembayaran</span><strong id="checkout-total">Rp0</strong></div>
+      </div>
+      <div class="panel payment-panel">
+        <h2>Metode Pembayaran</h2>
+        <img src="images/Qris.jpeg" alt="QRIS"="qris-image">QRIS</span><div><b>QRIS</b><small>Pembayaran digital</small></div><span class="selected">✓</span></div>
+        <p class="muted">Prototype ini menggunakan simulasi pembayaran. Tidak ada transaksi uang sungguhan.</p>
+        <button class="btn btn-primary full-btn" onclick="payOrder()">Konfirmasi & Bayar</button>
+        <button class="back-btn" onclick="showScreen('menu')">← Kembali pilih menu</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="success" class="screen">
+    <div class="success-card">
+      <div class="success-icon">✓</div>
+      <span class="eyebrow">PEMESANAN BERHASIL</span>
+      <h1>Terima kasih!</h1>
+      <p>Pesananmu berhasil dibuat. Simpan nomor pesanan berikut untuk pengambilan.</p>
+      <div class="order-number"><small>NOMOR PESANAN</small><strong id="success-number">NGG-001</strong></div>
+      <div class="success-total"><span>Total pembayaran</span><b id="success-total">Rp0</b></div>
+      <button class="btn btn-primary full-btn" onclick="showScreen('tracking')">Pantau Status Pesanan →</button>
+      <button class="back-btn" onclick="showScreen('home')">Kembali ke halaman utama</button>
+    </div>
+  </section>
+
+  <section id="tracking" class="screen">
+    <div class="page-heading">
+      <span class="eyebrow">CASE 2 · PEMANTAUAN PESANAN</span>
+      <h1>Pantau pesananmu</h1>
+      <p>Lihat perkembangan pesanan sampai siap diambil.</p>
+    </div>
+    <div class="tracking-card">
+      <div class="tracking-top"><div><small>NOMOR PESANAN</small><h2 id="tracking-number">NGG-001</h2></div><span class="status-pill" id="status-pill">Diproses</span></div>
+      <div class="progress-track"><div id="progress-fill"></div></div>
+      <div class="steps">
+        <div class="step active" id="step-1"><span>✓</span><b>Pesanan diterima</b><small>Pesanan masuk ke sistem</small></div>
+        <div class="step" id="step-2"><span>2</span><b>Pesanan diproses</b><small>Dapur sedang menyiapkan</small></div>
+        <div class="step" id="step-3"><span>3</span><b>Siap diambil</b><small>Silakan menuju kasir</small></div>
+        <div class="step" id="step-4"><span>4</span><b>Pesanan selesai</b><small>Pesanan telah diterima</small></div>
+      </div>
+      <div class="status-message" id="status-message">Pesananmu sedang diproses oleh dapur.</div>
+      <button class="btn btn-primary full-btn" id="next-status" onclick="advanceStatus()">Simulasikan status berikutnya →</button>
+      <p class="muted center">Status ini merupakan simulasi prototype, bukan terhubung langsung dengan dapur.</p>
+    </div>
+  </section>
+
+  <section id="processing" class="screen">
+    <div class="status-page-icon">👨‍🍳</div>
+    <span class="eyebrow">STATUS PESANAN</span>
+    <h1>Pesanan Diproses</h1>
+    <p>Dapur sedang menyiapkan pesananmu. Mohon tunggu sebentar.</p>
+    <div class="order-number"><small>NOMOR PESANAN</small><strong id="processing-number">NGG-001</strong></div>
+    <button class="btn btn-primary" onclick="showScreen('tracking')">Lihat perkembangan pesanan</button>
+  </section>
+
+  <section id="ready" class="screen">
+    <div class="status-page-icon">🔔</div>
+    <span class="eyebrow">PESANAN SIAP</span>
+    <h1>Siap diambil!</h1>
+    <p>Pesananmu sudah selesai disiapkan. Silakan menuju kasir dan tunjukkan nomor pesanan.</p>
+    <div class="order-number"><small>NOMOR PESANAN</small><strong id="ready-number">NGG-001</strong></div>
+    <button class="btn btn-primary" onclick="advanceStatus()">Konfirmasi sudah diambil →</button>
+  </section>
+
+  <section id="completed" class="screen">
+    <div class="status-page-icon">🎉</div>
+    <span class="eyebrow">PESANAN SELESAI</span>
+    <h1>Selamat menikmati!</h1>
+    <p>Pesanan telah diterima. Terima kasih sudah memilih Nasgor Geprek Gokil.</p>
+    <div class="order-number"><small>NOMOR PESANAN</small><strong id="completed-number">NGG-001</strong></div>
+    <button class="btn btn-primary" onclick="showScreen('home')">Kembali ke beranda</button>
+  </section>
+
+</main>
+
+<footer>
+  <b>RE-ORDER NASGOR GEPREK GOKIL</b>
+  <span>Pesan mudah · Bayar praktis · Ambil dengan nyaman</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
